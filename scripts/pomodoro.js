@@ -6,33 +6,37 @@ function CountdownTimer(seconds, tickRate) {
     this.isRunning = false; // Флаг, запущен ли таймер
     this.remaining = this.seconds; // Оставшееся время в секундах
     this.timerId = null; // ID таймера для setTimeout
+    this.endTime = null; // Время, когда таймер должен закончиться
 }
 
-
-/// Включаем сброс на текущий режим после завершения
 CountdownTimer.prototype.start = function() {
     if (this.isRunning) return;
 
     this.isRunning = true;
     hideTimeAdjustmentButtons();
-    const startTime = Date.now();
+
+    // Если таймер был приостановлен, устанавливаем endTime с учетом оставшегося времени
+    this.endTime = Date.now() + this.remaining * 1000;
+
     let thisTimer = this;
 
     const tick = function() {
-        let secondsSinceStart = ((Date.now() - startTime) / 1000) | 0;
-        let secondsRemaining = thisTimer.remaining - secondsSinceStart;
-
         if (!thisTimer.isRunning) {
-            thisTimer.remaining = secondsRemaining;
-        } else {
-            if (secondsRemaining > 0) {
-                thisTimer.timerId = setTimeout(tick, thisTimer.tickRate);
-            } else {
-                thisTimer.end();  // Вызов метода завершения
-            }
+            return;
         }
 
-        let timeRemaining = parseSeconds(secondsRemaining);
+        let now = Date.now();
+        let secondsRemaining = Math.ceil((thisTimer.endTime - now) / 1000);
+
+        if (secondsRemaining >= 0) {
+            thisTimer.remaining = secondsRemaining;
+            thisTimer.timerId = setTimeout(tick, thisTimer.tickRate);
+        } else {
+            thisTimer.remaining = 0;
+            thisTimer.end();
+        }
+
+        let timeRemaining = parseSeconds(thisTimer.remaining);
         thisTimer.tickFunctions.forEach(function(tickFunction) {
             tickFunction.call(thisTimer, timeRemaining.minutes, timeRemaining.seconds);
         });
@@ -46,6 +50,9 @@ CountdownTimer.prototype.pause = function() {
     this.isRunning = false; // Останавливаем таймер
     clearTimeout(this.timerId); // Очищаем setTimeout
     showTimeAdjustmentButtons(); // Показываем кнопки увеличения/уменьшения времени
+
+    // Обновляем оставшееся время
+    this.remaining = Math.ceil((this.endTime - Date.now()) / 1000);
 };
 
 // Метод для добавления функций при тиках
@@ -275,12 +282,5 @@ window.onload = function() {
         document.getElementById('btn_start').style.display = 'inline';
         document.getElementById('btn_pause').style.display = 'none';
     };
-
-
-
-
-
-
-
 
 };
