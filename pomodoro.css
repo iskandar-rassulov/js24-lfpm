@@ -4,7 +4,8 @@ body {
 	font-family: Arial, sans-serif;
 	margin: 0;
 	padding: 0;
-	height: 100vh;
+	min-height: 120vh;
+	overflow: hidden;
 }
 header {
 	padding-bottom: 10px;
@@ -218,6 +219,7 @@ div.footerbox ol {
 	position: absolute;
 	top: 50%;
 	transform: translate(50%, -50%);
+	height: 100vh;
 	border-radius: 10px; /* слегка скругленные углы */
 }
 
