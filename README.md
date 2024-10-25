@@ -18,5 +18,8 @@
 |-------------------|------------------|
 |![cr2](https://github.com/user-attachments/assets/52aed78b-8c68-4ee1-b682-82cd88323009) | ![cr3](https://github.com/user-attachments/assets/4afd614a-e8e4-4aa1-b646-f120220e436e) |
 
-## Website
+# Website
 https://iskander-rassulov.github.io/lofi-pomodoro/
+
+# Youtube Video
+https://www.youtube.com/watch?v=DUd-uCgA4Rs
