@@ -4,8 +4,9 @@ body {
 	font-family: Arial, sans-serif;
 	margin: 0;
 	padding: 0;
-	min-height: 120vh;
+	min-height: 100vh;
 	overflow: hidden;
+	overflow-y: scroll; /* Включает вертикальную прокрутку */
 }
 header {
 	padding-bottom: 10px;
