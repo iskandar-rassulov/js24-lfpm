@@ -14,6 +14,35 @@
 	}
   }
   
+  
+  @media (max-width: 768px) {
+	.main_container {
+	  width: 90%; /* Уменьшаем ширину */
+	  height: auto; /* Даем автоматическую высоту */
+	  padding: 10px; /* Уменьшаем внутренние отступы */
+	  top: 10%;
+	  transform: translate(0, 0); /* Убираем центрирование */
+	}
+  
+	.music-container {
+	  position: relative;
+	  margin: 20px auto 0; /* Центрируем и ставим под основным блоком */
+	  top: auto;
+	  right: auto;
+	  width: 100%; /* Растягиваем на всю ширину */
+	  height: auto;
+	}
+  
+	.button-container {
+	  flex-direction: column; /* Кнопки в столбик */
+	  gap: 10px; /* Добавляем отступы между кнопками */
+	}
+  
+	#timer {
+	  font-size: 8em; /* Уменьшаем размер таймера */
+	}
+  }
+  
 
 body {
 	margin: auto;
@@ -23,7 +52,6 @@ body {
 	padding: 0;
 	min-height: 100vh;
 	overflow: hidden;
-	overflow-y: scroll; /* Включает вертикальную прокрутку */
 }
 header {
 	padding-bottom: 10px;
