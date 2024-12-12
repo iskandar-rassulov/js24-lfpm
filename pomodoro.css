@@ -1,3 +1,20 @@
+@media (min-width: 1200px) {
+	.main_container {
+	  width: 60%; /* Увеличиваем ширину */
+	  height: 90vh; /* Делаем контейнер выше */
+	}
+  
+	#timer {
+	  font-size: 14em; /* Увеличиваем таймер */
+	}
+  
+	.button {
+	  width: 350px; /* Увеличиваем кнопки */
+	  height: 120px;
+	}
+  }
+  
+
 body {
 	margin: auto;
     text-align: center;
