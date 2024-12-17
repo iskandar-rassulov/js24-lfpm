@@ -1,316 +1,138 @@
 body {
-	margin: auto;
-    text-align: center;
-	font-family: Arial, sans-serif;
-	margin: 0;
-	padding: 0;
-	min-height: 100vh;
-	overflow: hidden;
-}
-header {
-	padding-bottom: 10px;
-	border-bottom: thin solid #777;
-    font-family: 'Indie Flower', cursive;
-}
-label {
-	padding: 0;
-	margin: 0;
-}
-h1 {
-	margin-top: 5px;
-	margin-bottom: 15px;
-	padding: 0;
-    font-family: 'Indie Flower', cursive;
-	font-size: 2em;
-	font-weight: bold;
-}
-footer {
-	padding: 10px 0px;
-	border-top: thin solid #ffffff;
-}
-
-#subtitle {
-	font-size: 1.5em;
-	color: white;
-}
-.content {
-	padding: 20px 0px 40px 0px;
-	height: 500px;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    color: white;
 }
 
 video#backgroundVideo {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100vw;
-	height: 100vh;
-	object-fit: cover; /* Чтобы видео занимало весь экран */
-	z-index: -1; /* Помещаем видео позади всех других элементов */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
 }
 
-
-
-#timer {
-	font-family: 'Comfortaa', sans-serif;
-    font-size: 12em;
-    font-weight: bold;
-	color: white;
-	text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+/* Общий контейнер страницы */
+.page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
-#titlebox {
-    font-family: 'Comfortaa', sans-serif;
-    text-align: center; /* Центрируем текст внутри контейнера */
-    padding: 16px; /* Фиксированный отступ */
+/* Заголовок (header) */
+.site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background: transparent;
 }
 
 #title {
-    font-size: 64px; /* Фиксированный размер текста */
+    font-family: 'Comfortaa', sans-serif;
+    font-size: 48px;
     font-weight: bold;
+    margin: 0;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
     color: white;
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8); /* Легкая тень текста */
 }
 
-
-button.btn_default {
-	padding: 8px 12px;
-    margin: 2px 0px;
-    font-weight: bold;
-	border-radius: 4px;
-	-webkit-border-radius: 4px;
-	border: 1px solid;
+/* Основная часть страницы */
+.site-main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
 }
 
-#btn_pomodoro{
-	font-family: 'Comfortaa', sans-serif;
-	margin-right:10px;
-	font-size: 14px;
-	background-color: #2d2d2d33;
-	border: 3px solid white;
-	color: #ffffff;
-	border-radius: 10px;
-	text-shadow: 8px 8px 16px rgba(0, 0, 0, 1);
-	transition: transform 0.3s ease; /* Плавная анимация при увеличении */
-}
-
-#btn_shortbreak{
-	font-family: 'Comfortaa', sans-serif;
-	margin-right:10px;
-	font-size: 14px;
-	background-color: #2d2d2d33;
-	border: 3px solid white;
-	color: #ffffff;
-	border-radius: 10px;
-	text-shadow: 8px 8px 16px rgba(0, 0, 0, 1);
-	transition: transform 0.3s ease; /* Плавная анимация при увеличении */
-}
-
-#btn_longbreak{
-	font-family: 'Comfortaa', sans-serif;
-	font-size: 14px;
-	background-color: #2d2d2d33;
-	border: 3px solid white;
-	color: #ffffff;
-	border-radius: 10px;
-	text-shadow: 8px 8px 16px rgba(0, 0, 0, 1);
-	transition: transform 0.3s ease; /* Плавная анимация при увеличении */
-}
-
-#btn_pomodoro:hover,
-#btn_longbreak:hover,
-#btn_shortbreak:hover {
-	transform: scale(1.1); /* Увеличение кнопки на 10% */
-}
-
-#btn_custom{
-	background-color: #1d3557;
-	border: 1px solid white;
-	color: white;
-}
-#btn_start {
-	font-family: 'Comfortaa', sans-serif;
-	margin-top: 150px;
-	font-size: 32px;
-    background-color: #2d2d2d33;
-	border: 3px solid white;
-	color: #ffffff;
-	border-radius: 10px;
-	text-shadow: 8px 8px 16px rgba(0, 0, 0, 1);
-	transition: transform 0.3s ease; /* Плавная анимация при увеличении */
-}
-
-#btn_pause {
-	font-family: 'Comfortaa', sans-serif;
-	margin-top: 150px;
-	font-size: 32px;
-	background-color: #2d2d2d33;
-	border: 3px solid white;
-	color: #ffffff;
-	border-radius: 10px;
-	text-shadow: 8px 8px 16px rgba(0, 0, 0, 1);
-	transition: transform 0.3s ease; /* Плавная анимация при увеличении */
-}
-
-#btn_start:hover,
-#btn_pause:hover {
-	transform: scale(1.1); /* Увеличение кнопки на 10% */
-}
-
-#ipt_custom {
-	padding: 8px 12px;
-    width: 75px;
-	border-radius: 4px;
-	-webkit-border-radius: 4px;
-	border: 1px solid;
+.control-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
 }
-#custom_units {
-	padding: 8px 12px;
-	border-radius: 4px;
-	-webkit-border-radius: 4px;
-	border: 1px solid;
-    text-align: center;
+
+/* Блок изменения времени */
+#modifiedTime {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
 }
-div.footerbox {
-	max-width: 300px;
-	margin:	10px 5px;
-	display: inline-block;
-	vertical-align: top;
-    padding: 8px 12px;
-	border-radius: 8px;
-	-webkit-border-radius: 8px;
-	color: white;
-}
-div.footerbox ol {
-	display: inline-block;
-	text-align: left;
-	padding-left: 15px;
-}
-#options {
-	text-align: left;
-	color: black;
-}
-#options label {
-	color: white;
-	margin-bottom: 5px;
-}
-#options select {
-	width: 100%;
-	margin-bottom: 20px;
-}
-.credits {
-    margin: 2em 0;
+
+#decreaseTime, #increaseTime {
+    font-family: 'Comfortaa', sans-serif;
+    font-size: 24px;
+    height: 40px;
+    width: 40px;
+    background: linear-gradient(135deg, #8c8c8c, #505050b3);
+    border: 2px solid white;
     color: #ffffff;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
 }
 
-#button-container{
-	align-content: left;
+#decreaseTime:hover, #increaseTime:hover {
+    background: linear-gradient(135deg, #444444, #2d2d2d);
+    transform: scale(1.1);
 }
 
-#audioPlayer {
-	background-color: #ffffff;
-	border-radius: 10px;
-	padding: 15px;
-	width: 100%;
-	margin: 20px 0;
+#currentTimeDisplay {
+    font-family: 'Comfortaa', sans-serif;
+    color: white;
+    font-size: 18px; 
+    font-weight: bold;
 }
 
-/* Центрированный контейнер с прозрачностью */
-.main_container {
-	background-color: rgba(0, 0, 0, 0.4); /* черный с 70% прозрачностью */
-	width: 50%;
-	margin: 0 auto;
-	padding: 20px;
-	text-align: center;
-	position: absolute;
-	top: 50%;
-	transform: translate(50%, -50%);
-	height: 100vh;
-	border-radius: 10px; /* слегка скругленные углы */
+/* Режимные кнопки (POMODORO, SHORT BREAK, LONG BREAK) */
+.mode-buttons {
+    margin-bottom: 20px;
 }
 
-/* Новый контейнер справа */
-.todo-container {
-	background-color: #000000; /* Тот же фон, что и у основного контейнера */
-	width: 20%; /* Уже, чем основной контейнер */
-	height: 80%;
-	padding: 20px;
-	text-align: center;
-	position: absolute;
-	top: 50%;
-	transform: translate(10%, -50%);
-	border-radius: 10px;
-	color: white;
+.mode-buttons button {
+    font-family: 'Comfortaa', sans-serif;
+    margin-right: 10px;
+    font-size: 14px;
+    background-color: #2d2d2d33;
+    border: 3px solid white;
+    color: #ffffff;
+    border-radius: 10px;
+    text-shadow: 8px 8px 16px rgba(0, 0, 0, 1);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    padding: 8px 12px;
 }
 
-.settings-container {
-	background-color: rgba(0, 0, 0, 0.85); /* Тот же фон, что и у основного контейнера */
-	width: 20%; /* Уже, чем основной контейнер */
-	height: 80%;
-	padding: 20px;
-	text-align: center;
-	position: absolute;
-	top: 10%;
-	right: 2.5%;
-	border-radius: 10px;
-	color: white;
+.mode-buttons button:last-child {
+    margin-right: 0;
 }
 
-/* Обновление стилей для кнопочного контейнера */
-.button-container { /* Полупрозрачный чёрный фон */
-	width: 80%; /* Ширина контейнера */
-	padding: 20px;
-	text-align: center;
-	position: relative;
-	margin: 0 auto; /* Центрирование */
-	border-radius: 15px;
-	gap: 20px; /* Отступы между кнопками */
-	display: flex;
-	flex-direction: row; /* Изменяем направление на горизонтальное (ряд) */
-	justify-content: center;
-	align-items: center;
-	color: white;
+.mode-buttons button:hover {
+    transform: scale(1.05);
+    background-color: #4e925f;
 }
 
-/* Общие стили для всех кнопок */
-.button {
-	position: relative;
-	width: 300px;
-	height: 100px; /* Соотношение 3:1 */
-	overflow: hidden;
-	border-radius: 10px;
-	transition: transform 0.3s ease-in-out;
-	border: 2px solid #ababab;
-	font-family: 'Comfortaa', sans-serif;
+.mode-buttons button.active-mode {
+    background-color: #395e42; /* Новый цвет для активного режима */
+    color: #ffffff; /* Цвет текста для контраста */
 }
 
-.button img {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-}
-
-.button .overlay {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-color: rgba(0, 0, 0, 0.35); /* Чёрный с прозрачностью */
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	color: #ffffff;
-	font-size: 1.5em;
-	font-weight: bold;
-	text-shadow: 8px 8px 16px rgba(0, 0, 0, 1); /* Добавляем тень для текста */
-	user-select: none;
-	cursor: pointer; /* Меняем курсор на указатель при наведении */
-}
-
-/* Увеличение кнопок при наведении */
-.button:hover {
-	transform: scale(1.1); /* Увеличение на 10% */
+.mode-buttons button.active-mode {
+    background-color: #395e42; /* Новый цвет для активного режима */
+    color: #ffffff; /* Цвет текста для контраста */
 }
 
 .active {
@@ -320,1087 +142,282 @@ div.footerbox ol {
 	text-shadow: 8px 8px 16px rgba(0, 0, 0, 0.8); /* Меньшая тень */
 }
 
-/* Music Player Style*/
+/* Таймер */
+.timer-container {
+    margin: 20px 0;
+}
 
-.music-container{
-	transform-origin:right;
+#timer {
+    font-family: 'Comfortaa', sans-serif;
+    font-size: 12em;
+    font-weight: bold;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+    margin: 0;
+}
+
+/* Кнопки START/PAUSE */
+.start-pause-buttons {
+    margin: 40px 0;
+}
+
+#btn_start, #btn_pause {
+    font-family: 'Comfortaa', sans-serif;
+    font-size: 32px;
+    background-color: #2d2d2d33;
+    border: 3px solid white;
+    color: #ffffff;
+    border-radius: 10px;
+    text-shadow: 8px 8px 16px rgba(0, 0, 0, 1);
+    transition: transform 0.3s ease;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+#btn_pause {
+    display: none;
+}
+
+#btn_start:hover, #btn_pause:hover {
+    transform: scale(1.05);
+}
+
+/* Кнопки смены заднего фона (Regular, Halloween, Medieval) */
+.button-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.button {
+    position: relative;
+    width: 200px;
+    height: 80px;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    border: 2px solid #ababab;
+    font-family: 'Comfortaa', sans-serif;
+    cursor: pointer;
+}
+
+.button img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.button .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.35);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-shadow: 8px 8px 16px rgba(0, 0, 0, 1);
+    user-select: none;
+}
+
+.button:hover {
+    transform: scale(1.06);
+}
+
+/* Подвал (footer) */
+.site-footer {
+    padding: 20px 0;
+    text-align: center;
+}
+
+.credits {
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.player-wrapper {
+	display: flex;
+	justify-content: flex-end; /* Выравнивание вправо */
+	align-items: top; /* Вертикальное центрирование */
+	height: 100%; /* Полная высота родителя */
+	margin-right: -200px;
+  }
+  
+  .music-container {
 	background-color: #efefefb3;
-	height: 450px;
-	width: 300px;
+	height: 310px;
+	width: 200px;
 	border-radius: 20px;
 	box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
 	transition: all 0.5s ease;
-
-	/* Для размещения в правом верхнем углу */
-	position: absolute;
-	top: 20px; /* Отступ сверху */
-	right: 100px; /* Отступ справа */
-}
-
-.container:hover{
-	box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
-}
-
-.player-img{
-	width: 200px;
-	height: 200px;
-	position: relative;
-	top: -10px;
-	left: 50px;
-}
-
-.player-img img{
-	object-fit: cover;
-	border-radius: 20px;
-	height: 0;
-	width: 0;
-	opacity: 0;
-	box-shadow: 0 5px 30px 5px rgba(0, 0, 0, 0.5);
-}
-
-.player-img:hover img{
-	box-shadow: 0 5px 30px 5px rgba(0, 0, 0, 0.8);
-}
-
-.player-img img.active{
-	width: 100%;
-	height: 100%;
-	transition: all 0.5s;
-	opacity: 1;
-}
-
-h2{
-	font-size: 25px;
-	text-align: center;
-	font-weight: 500;
-	margin: 10px 0 0;
-}
-
-h3{
-	font-size: 18px;
-	text-align: center;
-	font-weight: 500;
-	margin: 10px 0 0;
-}
-
-h6{
-	font-size: 14px;
-	text-align: center;
-	font-weight: 500;
-}
-
-.player-progress{
-	background-color: #fff;
-	border-radius: 5px;
-	cursor: pointer;
-	margin: 40px 20px 35px;
-	height: 6px;
-	width: 90%;
-}
-
-.progress{
-	background-color: #212121;
-	border-radius: 5px;
-	height: 100%;
-	width: 0%;
-	transition: width 0.1s linear;
-}
-
-.music-duration{
-	position: relative;
-	top: -15px;
+	padding: 20px;
 	display: flex;
-	justify-content: space-between;
-}
-
-.player-controls{
+	flex-direction: column;
+	align-items: center;
 	position: relative;
-	top: -10px;
-	left: 70px;
-	width: 200px;
+  }
+  
+
+.player-img {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    margin-top: -10px;
 }
 
-.fa-solid{
-	font-size: 30px;
-	color: #666;
-	margin-right: 30px;
-	cursor: pointer;
-	user-select: none;
-	transition: all 0.3s ease;
+.player-img img {
+    object-fit: cover;
+    border-radius: 20px;
+    height: 0;
+    width: 0;
+    opacity: 0;
+    box-shadow: 0 5px 30px 5px rgba(0, 0, 0, 0.5);
+    transition: all 0.5s;
 }
 
-.fa-solid:hover{
-	filter: brightness(40%);
+.player-img img.active {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
 }
 
-.play-button{
-	font-size: 33px;
-	position: relative;
-	top: 3px;
+.music-container h2 {
+    font-size: 18px;
+    text-align: center;
+    font-weight: 500;
+    margin: 20px 0 0;
+    color: #000;
 }
 
-/*VOLUME STYLE*/
+.music-container h3 {
+    font-size: 14px;
+    text-align: center;
+    font-weight: 500;
+    margin: 10px 0 0;
+    color: #000;
+}
 
+.music-container h6 {
+    font-size: 14px;
+    text-align: center;
+    font-weight: 500;
+    color: #000;
+    margin-bottom: 10px;
+}
 
+.player-progress {
+    background-color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 12px 20px 10px;
+    height: 6px;
+    width: 90%;
+    position: relative;
+}
+
+.progress {
+    background-color: #212121;
+    border-radius: 5px;
+    height: 100%;
+    width: 0%;
+    transition: width 0.1s linear;
+}
+
+.music-duration {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    position: relative;
+    top: -10px;
+    font-size: 14px;
+    color: #000;
+}
+
+.player-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    margin: 25px 0;
+}
+
+.fa-solid {
+    font-size: 22px;
+    color: #666;
+    margin-right: 30px;
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.3s ease;
+}
+
+.fa-solid:last-child {
+    margin-right: 0;
+}
+
+.fa-solid:hover {
+    filter: brightness(40%);
+}
+
+.play-button {
+    font-size: 22px;
+    position: relative;
+    top: 3px;
+}
+
+/* Volume */
 .volume-wrapper {
-	position: relative;
-	width: 200px;
-	height: 5px;
-	display: flex;
-	align-items: center;  /* Центрирование по вертикали */
-	justify-content: center;  /* Центрирование по горизонтали */
-	margin: 0 auto;  /* Центрирование всего контейнера на странице */
+    position: relative;
+    width: 100px;
+    height: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .volume-bar {
-	position: relative;
-	background-color: #e0e0e0;
-	border-radius: 5px;
-	width: 100%;
-	height: 100%;
-	overflow: hidden;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    position: relative;
 }
 
 .volume-progress {
-	position: absolute;
-	left: 0;
-	background-color: #696969;
-	height: 100%;
-	width: 50%; /* Прогресс обновляется мгновенно */
+    position: absolute;
+    left: 0;
+    background-color: #696969;
+    height: 100%;
+    width: 50%;
 }
 
 #volume-control {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	background: transparent;
-	cursor: pointer;
-	appearance: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    cursor: pointer;
+    appearance: none;
 }
 
 #volume-control::-webkit-slider-thumb {
-	appearance: none;
-	width: 10px;
-	height: 10px;
-	background-color: #3f3f3f;
-	border-radius: 50%;
-	cursor: pointer;
+    appearance: none;
+    width: 10px;
+    height: 10px;
+    background-color: #3f3f3f;
+    border-radius: 50%;
+    cursor: pointer;
 }
 
 #volume-control::-moz-range-thumb {
-	width: 11px;
-	height: 16px;
-	background-color: #007bff;
-	border-radius: 50%;
-	cursor: pointer;
-}
-
-/*MODIFY TIME STYLE*/
-
-#currentTimeDisplay{
-	font-family: 'Comfortaa', sans-serif;
-	color: white;
-}
-
-#decreaseTime, #increaseTime {
-	font-family: 'Comfortaa', sans-serif;
-	font-size: 24px;
-	height: 40px;
-	width: 40px;
-	background: linear-gradient(135deg, #8c8c8c, #505050b3); /* Градиентный фон */
-	border: none; /* Убираем рамку */
-	color: #ffffff;
-	border: 2px solid white;
-	border-radius: 10px; /* Слегка закругленные углы */
-
-	display: flex;
-	align-items: center;
-	justify-content: center;
-
-	padding: 0;
-	margin: 0;
-
-	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-	transition: background 0.3s ease, transform 0.3s ease;
-}
-#decreaseTime:hover, #increaseTime:hover {
-	background: linear-gradient(135deg, #444444, #2d2d2d); /* Изменение цвета при наведении */
-	transform: scale(1.1);
-}
-
-#currentTimeDisplay{
-	font-size: 18px; 
-	font-weight: bold;
-}
-
-/*LOGIN WITH TODOIST BUTTON*/
-
-.btn_todoist {
-	background-color: #fc5c65;
-	color: white;
-	border: none;
-	padding: 10px 20px;
-	font-size: 16px;
-	cursor: pointer;
-	position: fixed;  /* Фиксированное положение на экране */
-	left: 100px;       /* Позиция слева */
-	top: 10px;        /* Отступ сверху */
-	border-radius: 8px; /* Закругленные края кнопки */
-	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Легкая тень */
-	transition: background 0.3s ease, transform 0.3s ease;
-}
-
-.btn_todoist:hover {
-	background-color: #e74c3c; /* Изменение цвета при наведении */
-	transform: scale(1.05);    /* Увеличение кнопки при наведении */
-}
-
-/*USER TODOIST*/
-
-#user-info {
-	display: flex;
-	align-items: center;
-	margin-top: 200px;
-}
-
-#user-avatar {
-	margin-right: 10px;
-	border: 2px solid #ccc;
-}
-
-#user-name {
-	font-family: 'Comfortaa', sans-serif;
-	font-size: 1.5em;
-	color: #ffffff;
-}
-
-
-
-@media (min-width: 3840px) {
-
-	/*MAIN BLOCK------------------------------------------------------------------------------------------------------------------4K*/
-    #modifiedTime {
-        gap: 100px; /* Увеличиваем промежуток между кнопками и текстом */
-    }
-
-    #decreaseTime, #increaseTime {
-        font-size: 7rem; /* Увеличиваем размер текста кнопок */
-        height: 120px; /* Увеличиваем высоту кнопок */
-        width: 120px; /* Увеличиваем ширину кнопок */
-        border: 3px solid white; /* Более заметные границы */
-    }
-
-    #currentTimeDisplay {
-		padding: 0 20px; /* Отступы слева и справа по 20px */
-		font-size: 6rem; /* Увеличенный размер текста */
-		font-weight: bold;
-	}
-	
-    /* Увеличение содержимого (content) */
-    .content {
-        padding: 80px 0; /* Увеличиваем внутренние отступы */
-    }
-
-    #btn_pomodoro,
-    #btn_shortbreak,
-    #btn_longbreak {
-        font-size: 4rem; /* Увеличиваем текст кнопок */
-        padding: 15px 30px; /* Увеличиваем внутренние отступы */
-        border: 4px solid white; /* Более заметные границы */
-    }
-
-    #timer {
-        font-size: 42rem; /* Значительное увеличение размера таймера */
-        text-shadow: 4px 4px 12px rgba(0, 0, 0, 0.8); /* Увеличиваем тень */
-    }
-
-    #btn_start,
-    #btn_pause {
-        font-size: 7rem; /* Увеличиваем текст кнопок */
-        padding: 20px 40px; /* Увеличиваем отступы внутри кнопок */
-        margin-top: 300px; /* Увеличиваем отступ сверху */
-    }
-
-	footer {
-        padding: 40px 20px; /* Увеличиваем внутренние отступы */
-    }
-
-    .button-container {
-        gap: 60px; /* Увеличиваем расстояние между кнопками */
-		margin-top: 700px;
-    }
-
-    .button {
-        width: 800px; /* Увеличиваем ширину кнопок */
-        height: 200px; /* Увеличиваем высоту кнопок */
-        font-size: 3rem; /* Увеличиваем текст внутри кнопок */
-    }
-
-    .button img {
-        object-fit: cover; /* Убедимся, что изображения заполняют кнопки */
-    }
-
-    .overlay {
-        font-size: 2rem; /* Увеличиваем текст наложения */
-        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8); /* Улучшаем читаемость текста */
-    }
-
-    .credits {
-        font-size: 4.2rem; /* Увеличиваем текст "Created by" */
-        margin-top: 120px; /* Добавляем пространство сверху */
-    }
-	
-	/*MUSIC CONTAINER------------------------------------------------------------------------------------------------------------------4K*/
-	.music-container {
-        width: 700px; /* Увеличиваем ширину */
-        height: 1200px; /* Увеличиваем высоту */
-        padding: 60px; /* Добавляем внутренние отступы */
-        border-radius: 20px; /* Более выраженные скругления */
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3); /* Улучшенный тень */
-    }
-
-    .player-img {
-		padding-right: 120px;
-        width: 600px;
-        height: 600px;
-        margin: 20 auto; /* Центрируем изображение */
-    }
-
-    .player-img img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 10px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Тень для изображения */
-    }
-
-    #music-title {
-        font-size: 6rem; /* Увеличиваем текст заголовка */
-        margin-top: 20px;
-    }
-
-    #music-artist {
-        font-size: 5rem; /* Увеличиваем текст исполнителя */
-        color: #666;
-        margin-bottom: 20px;
-    }
-
-    .player-progress {
-        height: 20px; /* Увеличиваем высоту прогресс-бара */
-        margin: 40px 0;
-    }
-
-    .progress {
-        height: 100%;
-        background-color: #212121;
-    }
-
-    .music-duration {
-        font-size: 3rem; /* Увеличиваем шрифт времени */
-    }
-
-    .player-controls {
-		width: 420px;
-        display: flex;
-        justify-content: center;
-        gap: 40px; /* Увеличиваем расстояние между кнопками */
-        margin-top: 80px;
-    }
-
-    .play-button, .backward-button, .forward-button {
-        font-size: 6rem; /* Увеличиваем кнопку Play */
-        color: #444;
-    }
-
-    h6 {
-        font-size: 6rem; /* Увеличиваем текст громкости */
-        margin-top: 30px;
-    }
-
-	.volume-wrapper{
-		height: 14px;
-		width: 400px;
-	}
-
-}
-
-@media (min-width: 2560px) and (max-width: 3839px) {
-    /* MAIN BLOCK */
-    #modifiedTime {
-        gap: 67px; /* Пропорционально уменьшаем промежуток */
-    }
-
-    #decreaseTime, #increaseTime {
-        font-size: 4.67rem; /* Пропорционально уменьшаем размер текста кнопок */
-        height: 80px; /* Уменьшаем высоту */
-        width: 80px; /* Уменьшаем ширину */
-        border: 2px solid white; /* Пропорциональное уменьшение толщины */
-    }
-
-    #currentTimeDisplay {
-        padding: 0 13px; /* Пропорциональные отступы */
-        font-size: 4rem; /* Уменьшаем размер текста */
-        font-weight: bold;
-    }
-
-    .content {
-        padding: 53px 0; /* Пропорционально уменьшаем внутренние отступы */
-    }
-
-    #btn_pomodoro,
-    #btn_shortbreak,
-    #btn_longbreak {
-        font-size: 2.67rem; /* Уменьшаем размер текста кнопок */
-        padding: 10px 20px; /* Уменьшаем внутренние отступы */
-        border: 2.67px solid white;
-    }
-
-    #timer {
-        font-size: 28rem; /* Пропорциональное уменьшение размера таймера */
-        text-shadow: 2.67px 2.67px 8px rgba(0, 0, 0, 0.8);
-    }
-
-    #btn_start,
-    #btn_pause {
-        font-size: 4.67rem; /* Уменьшаем текст кнопок */
-        padding: 13px 27px; /* Пропорциональные отступы */
-        margin-top: 200px; /* Уменьшаем отступ сверху */
-    }
-
-    .button-container {
-        gap: 40px; /* Уменьшаем расстояние между кнопками */
-        margin-top: 300px; /* Пропорционально уменьшаем отступ */
-    }
-
-    .button {
-        width: 533px; /* Уменьшаем ширину кнопок */
-        height: 133px; /* Уменьшаем высоту кнопок */
-        font-size: 2rem; /* Уменьшаем текст внутри кнопок */
-    }
-
-    .button img {
-        object-fit: cover;
-    }
-
-    .overlay {
-        font-size: 1.33rem; /* Уменьшаем текст наложения */
-        text-shadow: 1.33px 1.33px 3.33px rgba(0, 0, 0, 0.8);
-    }
-
-    .credits {
-        font-size: 2.8rem; /* Уменьшаем текст "Created by" */
-        margin-top: 80px;
-    }
-
-    /* MUSIC CONTAINER */
-    .music-container {
-        width: 467px; /* Уменьшаем ширину */
-        height: 800px; /* Уменьшаем высоту */
-        padding: 40px; /* Уменьшаем внутренние отступы */
-        border-radius: 13px; /* Пропорциональные скругления */
-        box-shadow: 0 13px 27px rgba(0, 0, 0, 0.3);
-    }
-
-    .player-img {
-        padding-right: 80px;
-        width: 400px;
-        height: 400px;
-        margin: 13 auto;
-    }
-
-    .player-img img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 6.67px;
-        box-shadow: 0 6.67px 20px rgba(0, 0, 0, 0.5);
-    }
-
-    #music-title {
-        font-size: 4rem; /* Уменьшаем текст заголовка */
-        margin-top: 13px;
-    }
-
-    #music-artist {
-        font-size: 3.33rem; /* Уменьшаем текст исполнителя */
-        color: #666;
-        margin-bottom: 13px;
-    }
-
-    .player-progress {
-        height: 13.33px; /* Уменьшаем высоту прогресс-бара */
-        margin: 27px 0;
-    }
-
-    .progress {
-        height: 100%;
-        background-color: #212121;
-    }
-
-    .music-duration {
-        font-size: 2rem; /* Уменьшаем шрифт времени */
-    }
-
-    .player-controls {
-        width: 280px;
-        display: flex;
-        justify-content: center;
-        gap: 27px; /* Уменьшаем расстояние между кнопками */
-        margin-top: 53px;
-    }
-
-    .play-button, .backward-button, .forward-button {
-        font-size: 4rem; /* Уменьшаем кнопки */
-        color: #444;
-    }
-
-    h6 {
-        font-size: 4rem; /* Уменьшаем текст громкости */
-        margin-top: 20px;
-    }
-
-    .volume-wrapper {
-        height: 9.33px;
-        width: 267px;
-    }
-}
-
-@media (min-width: 1920px) and (max-width: 2559px) {
-    /* MAIN BLOCK */
-    #modifiedTime {
-        gap: 35px; /* Пропорционально уменьшаем промежуток */
-    }
-
-    #decreaseTime, #increaseTime {
-        font-size: 3.1rem; /* Пропорционально уменьшаем размер текста кнопок */
-        height: 40px; /* Уменьшаем высоту */
-        width: 40px; /* Уменьшаем ширину */
-        border: 1px solid white; /* Пропорциональное уменьшение толщины */
-    }
-
-    #currentTimeDisplay {
-        padding: 0 7px; /* Пропорциональные отступы */
-        font-size: 2.2rem; /* Пропорционально уменьшаем размер текста */
-        font-weight: bold;
-    }
-
-    .content {
-        padding: 28px 0; /* Пропорционально уменьшаем внутренние отступы */
-    }
-
-    #btn_pomodoro,
-    #btn_shortbreak,
-    #btn_longbreak {
-        font-size: 1.8rem; /* Пропорционально уменьшаем текст кнопок */
-        padding: 5px 10px; /* Пропорциональные внутренние отступы */
-        border: 2.84px solid white;
-    }
-
-    #timer {
-        font-size: 14rem; /* Пропорционально уменьшаем размер таймера */
-        text-shadow: 1.42px 1.42px 4.25px rgba(0, 0, 0, 0.8);
-    }
-
-    #btn_start,
-    #btn_pause {
-        font-size: 3.8rem; /* Пропорционально уменьшаем текст кнопок */
-        padding: 7px 15px; /* Пропорциональные отступы */
-        margin-top: 130px; /* Пропорционально уменьшаем отступ сверху */
-    }
-
-    .button-container {
-        gap: 21px; /* Пропорционально уменьшаем расстояние между кнопками */
-        margin-top: -10px; /* Пропорционально уменьшаем отступ */
-    }
-
-    .button {
-        width: 410px; /* Пропорционально уменьшаем ширину кнопок */
-        height: 90px; /* Пропорционально уменьшаем высоту кнопок */
-        font-size: 1.6rem; /* Пропорционально уменьшаем текст внутри кнопок */
-    }
-
-    .button img {
-        object-fit: cover;
-    }
-
-    .overlay {
-        font-size: 1rem; /* Пропорционально уменьшаем текст наложения */
-        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
-    }
-
-    .credits {
-        font-size: 1.6rem; /* Пропорционально уменьшаем текст "Created by" */
-        margin-top: 43px;
-    }
-
-    /* MUSIC CONTAINER */
-    .music-container {
-        width: 330px; /* Пропорционально уменьшаем ширину */
-        height: 550px; /* Пропорционально уменьшаем высоту */
-        border-radius: 7px; /* Пропорциональные скругления */
-        box-shadow: 0 7px 15px rgba(0, 0, 0, 0.3);
-		margin-right: -50px;
-    }
-
-    .player-img {
-        width: 250px;
-        height: 250px;
-    }
-
-    .player-img img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 5px;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-    }
-
-    #music-title {
-        font-size: 2.8rem; /* Пропорционально уменьшаем текст заголовка */
-        margin-top: 14px;
-    }
-
-    #music-artist {
-        font-size: 2.4rem; /* Пропорционально уменьшаем текст исполнителя */
-        color: #666;
-        margin-bottom: -20px;
-    }
-
-    .player-progress {
-		width: auto;
-        height: 9px; /* Пропорционально уменьшаем высоту прогресс-бара */
-    }
-
-    .progress {
-        height: 100%;
-        background-color: #212121;
-    }
-
-    .music-duration {
-        font-size: 1.6rem; /* Пропорционально уменьшаем шрифт времени */
-    }
-
-    .player-controls {
-		margin-left: 5px;
-        gap: 21px; /* Пропорционально уменьшаем расстояние между кнопками */
-    }
-
-    .play-button, .backward-button, .forward-button {
-        font-size: 2.83rem; /* Пропорционально уменьшаем кнопки */
-        color: #444;
-    }
-
-    h6 {
-        font-size: 2.4rem; /* Пропорционально уменьшаем текст громкости */
-    }
-
-    .volume-wrapper {
-        height: 8px;
-        width: 190px;
-    }
-}
-
-@media (min-width: 1600px) and (max-width: 1919px) {
-    /* MAIN BLOCK */
-    #modifiedTime {
-        gap: 35px; /* Пропорционально уменьшаем промежуток */
-    }
-
-    #decreaseTime, #increaseTime {
-        font-size: 2.5rem; /* Пропорционально уменьшаем размер текста кнопок */
-        height: 38px; /* Уменьшаем высоту */
-        width: 38px; /* Уменьшаем ширину */
-        border: 1px solid white; /* Пропорциональное уменьшение толщины */
-    }
-
-    #currentTimeDisplay {
-        padding: 0 7px; /* Пропорциональные отступы */
-        font-size: 2.2rem; /* Пропорционально уменьшаем размер текста */
-        font-weight: bold;
-    }
-
-    .content {
-        padding: 28px 0; /* Пропорционально уменьшаем внутренние отступы */
-    }
-
-    #btn_pomodoro,
-    #btn_shortbreak,
-    #btn_longbreak {
-        font-size: 1.42rem; /* Пропорционально уменьшаем текст кнопок */
-        padding: 5px 10px; /* Пропорциональные внутренние отступы */
-        border: 1.42px solid white;
-    }
-
-    #timer {
-        font-size: 14rem; /* Пропорционально уменьшаем размер таймера */
-        text-shadow: 1.42px 1.42px 4.25px rgba(0, 0, 0, 0.8);
-    }
-
-    #btn_start,
-    #btn_pause {
-        font-size: 2.5rem; /* Пропорционально уменьшаем текст кнопок */
-        padding: 7px 15px; /* Пропорциональные отступы */
-        margin-top: 80px; /* Пропорционально уменьшаем отступ сверху */
-    }
-
-    footer {
-        padding: 14px 7px; /* Пропорциональные внутренние отступы */
-    }
-
-    .button-container {
-        gap: 21px; /* Пропорционально уменьшаем расстояние между кнопками */
-        margin-top: -150px; /* Пропорционально уменьшаем отступ */
-    }
-
-    .button {
-        width: 284px; /* Пропорционально уменьшаем ширину кнопок */
-        height: 71px; /* Пропорционально уменьшаем высоту кнопок */
-        font-size: 1.1rem; /* Пропорционально уменьшаем текст внутри кнопок */
-    }
-
-    .button img {
-        object-fit: cover;
-    }
-
-    .overlay {
-        font-size: 1rem; /* Пропорционально уменьшаем текст наложения */
-        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
-    }
-
-    .credits {
-        font-size: 1.5rem; /* Пропорционально уменьшаем текст "Created by" */
-        margin-top: 43px;
-    }
-
-    /* MUSIC CONTAINER */
-    .music-container {
-        width: 260px; /* Пропорционально уменьшаем ширину */
-        height: 430px; /* Пропорционально уменьшаем высоту */
-        border-radius: 7px; /* Пропорциональные скругления */
-        box-shadow: 0 7px 15px rgba(0, 0, 0, 0.3);
-		margin-right: -50px;
-    }
-
-    .player-img {
-        width: 180px;
-        height: 180px;
-    }
-
-    .player-img img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 5px;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-    }
-
-    #music-title {
-        font-size: 2.13rem; /* Пропорционально уменьшаем текст заголовка */
-        margin-top: 14px;
-    }
-
-    #music-artist {
-        font-size: 1.77rem; /* Пропорционально уменьшаем текст исполнителя */
-        color: #666;
-        margin-bottom: -20px;
-    }
-
-    .player-progress {
-		width: auto;
-        height: 7px; /* Пропорционально уменьшаем высоту прогресс-бара */
-    }
-
-    .progress {
-        height: 100%;
-        background-color: #212121;
-    }
-
-    .music-duration {
-        font-size: 1.5rem; /* Пропорционально уменьшаем шрифт времени */
-    }
-
-    .player-controls {
-		margin-left: -20px;
-        gap: 21px; /* Пропорционально уменьшаем расстояние между кнопками */
-    }
-
-    .play-button, .backward-button, .forward-button {
-        font-size: 2.13rem; /* Пропорционально уменьшаем кнопки */
-        color: #444;
-    }
-
-    h6 {
-        font-size: 2rem; /* Пропорционально уменьшаем текст громкости */
-    }
-
-    .volume-wrapper {
-        height: 7px;
-        width: 180px;
-    }
-}
-
-@media (min-width: 1366px) and (max-width: 1599px) {
-    /* MAIN BLOCK */
-    #modifiedTime {
-        gap: 35px; /* Пропорционально уменьшаем промежуток */
-    }
-
-    #decreaseTime, #increaseTime {
-        font-size: 2.5rem; /* Пропорционально уменьшаем размер текста кнопок */
-        height: 38px; /* Уменьшаем высоту */
-        width: 38px; /* Уменьшаем ширину */
-        border: 1px solid white; /* Пропорциональное уменьшение толщины */
-    }
-
-    #currentTimeDisplay {
-        padding: 0 7px; /* Пропорциональные отступы */
-        font-size: 2.2rem; /* Пропорционально уменьшаем размер текста */
-        font-weight: bold;
-    }
-
-    .content {
-        padding: 28px 0; /* Пропорционально уменьшаем внутренние отступы */
-    }
-
-    #btn_pomodoro,
-    #btn_shortbreak,
-    #btn_longbreak {
-        font-size: 1.42rem; /* Пропорционально уменьшаем текст кнопок */
-        padding: 5px 10px; /* Пропорциональные внутренние отступы */
-        border: 1.42px solid white;
-    }
-
-    #timer {
-        font-size: 10rem; /* Пропорционально уменьшаем размер таймера */
-        text-shadow: 1.42px 1.42px 4.25px rgba(0, 0, 0, 0.8);
-    }
-
-    #btn_start,
-    #btn_pause {
-        font-size: 2.5rem; /* Пропорционально уменьшаем текст кнопок */
-        padding: 7px 15px; /* Пропорциональные отступы */
-        margin-top: 80px; /* Пропорционально уменьшаем отступ сверху */
-    }
-
-    .button-container {
-        gap: 21px; /* Пропорционально уменьшаем расстояние между кнопками */
-        margin-top: -200px; /* Пропорционально уменьшаем отступ */
-    }
-
-    .button {
-        width: 284px; /* Пропорционально уменьшаем ширину кнопок */
-        height: 71px; /* Пропорционально уменьшаем высоту кнопок */
-        font-size: 1.1rem; /* Пропорционально уменьшаем текст внутри кнопок */
-    }
-
-    .button img {
-        object-fit: cover;
-    }
-
-    .overlay {
-        font-size: 1rem; /* Пропорционально уменьшаем текст наложения */
-        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
-    }
-
-    .credits {
-        font-size: 1.5rem; /* Пропорционально уменьшаем текст "Created by" */
-        margin-top: 43px;
-    }
-
-    /* MUSIC CONTAINER */
-    .music-container {
-        width: 260px; /* Пропорционально уменьшаем ширину */
-        height: 430px; /* Пропорционально уменьшаем высоту */
-        border-radius: 7px; /* Пропорциональные скругления */
-        box-shadow: 0 7px 15px rgba(0, 0, 0, 0.3);
-		margin-right: -50px;
-    }
-
-    .player-img {
-        width: 180px;
-        height: 180px;
-    }
-
-    .player-img img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 5px;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-    }
-
-    #music-title {
-        font-size: 2.13rem; /* Пропорционально уменьшаем текст заголовка */
-        margin-top: 14px;
-    }
-
-    #music-artist {
-        font-size: 1.77rem; /* Пропорционально уменьшаем текст исполнителя */
-        color: #666;
-        margin-bottom: -20px;
-    }
-
-    .player-progress {
-		width: auto;
-        height: 7px; /* Пропорционально уменьшаем высоту прогресс-бара */
-    }
-
-    .progress {
-        height: 100%;
-        background-color: #212121;
-    }
-
-    .music-duration {
-        font-size: 1.5rem; /* Пропорционально уменьшаем шрифт времени */
-    }
-
-    .player-controls {
-		margin-left: -20px;
-        gap: 21px; /* Пропорционально уменьшаем расстояние между кнопками */
-    }
-
-    .play-button, .backward-button, .forward-button {
-        font-size: 2.13rem; /* Пропорционально уменьшаем кнопки */
-        color: #444;
-    }
-
-    h6 {
-        font-size: 2rem; /* Пропорционально уменьшаем текст громкости */
-    }
-
-    .volume-wrapper {
-        height: 7px;
-        width: 180px;
-    }
-}
-
-@media (min-width: 200px) and (max-width: 1365px) {
-
-    /* MAIN BLOCK */
-    #modifiedTime {
-        gap: 30px; /* Пропорционально уменьшаем промежуток */
-    }
-
-    #decreaseTime, #increaseTime {
-        font-size: 2rem; /* Пропорционально уменьшаем размер текста кнопок */
-        height: 40px; /* Уменьшаем высоту */
-        width: 40px; /* Уменьшаем ширину */
-        border: 1px solid white; /* Пропорциональное уменьшение толщины */
-    }
-
-    #currentTimeDisplay {
-        padding: 0 5px; /* Пропорциональные отступы */
-        font-size: 1.8rem; /* Пропорционально уменьшаем размер текста */
-        font-weight: bold;
-    }
-
-    .content {
-        padding: 25px 0; /* Пропорционально уменьшаем внутренние отступы */
-    }
-
-    #btn_pomodoro,
-    #btn_shortbreak,
-    #btn_longbreak {
-        font-size: 1.2rem; /* Пропорционально уменьшаем текст кнопок */
-        padding: 4px 8px; /* Пропорциональные внутренние отступы */
-        border: 1.2px solid white;
-    }
-
-    #timer {
-        font-size: 12rem; /* Пропорционально уменьшаем размер таймера */
-        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
-    }
-
-    #btn_start,
-    #btn_pause {
-        font-size: 2rem; /* Пропорционально уменьшаем текст кнопок */
-        padding: 6px 12px; /* Пропорциональные отступы */
-        margin-top: 50px; /* Пропорционально уменьшаем отступ сверху */
-    }
-
-    footer {
-        padding: 10px 0; /* Пропорциональные внутренние отступы */
-    }
-
-    .button-container {
-        gap: 15px; /* Пропорционально уменьшаем расстояние между кнопками */
-        margin-top: -200px; /* Пропорционально уменьшаем отступ */
-    }
-
-    .button {
-        width: 250px; /* Пропорционально уменьшаем ширину кнопок */
-        height: 60px; /* Пропорционально уменьшаем высоту кнопок */
-        font-size: 1rem; /* Пропорционально уменьшаем текст внутри кнопок */
-    }
-
-    .credits {
-        font-size: 1.2rem; /* Пропорционально уменьшаем текст "Created by" */
-        margin-top: 0px;
-    }
-
-     /* MUSIC CONTAINER */
-	 .music-container {
-        width: 260px; /* Пропорционально уменьшаем ширину */
-        height: 410px; /* Пропорционально уменьшаем высоту */
-        border-radius: 7px; /* Пропорциональные скругления */
-        box-shadow: 0 7px 15px rgba(0, 0, 0, 0.3);
-		margin-right: -50px;
-    }
-
-    .player-img {
-        width: 180px;
-        height: 180px;
-    }
-
-    .player-img img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 5px;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-    }
-
-    #music-title {
-        font-size: 2.13rem; /* Пропорционально уменьшаем текст заголовка */
-        margin-top: 14px;
-    }
-
-    #music-artist {
-        font-size: 1.77rem; /* Пропорционально уменьшаем текст исполнителя */
-        color: #666;
-        margin-bottom: -20px;
-    }
-
-    .player-progress {
-		width: auto;
-        height: 7px; /* Пропорционально уменьшаем высоту прогресс-бара */
-    }
-
-    .progress {
-        height: 100%;
-        background-color: #212121;
-    }
-
-    .music-duration {
-        font-size: 1.5rem; /* Пропорционально уменьшаем шрифт времени */
-    }
-
-    .player-controls {
-		margin-left: -20px;
-        gap: 21px; /* Пропорционально уменьшаем расстояние между кнопками */
-    }
-
-    .play-button, .backward-button, .forward-button {
-        font-size: 2.13rem; /* Пропорционально уменьшаем кнопки */
-        color: #444;
-    }
-
-    h6 {
-        font-size: 2rem; /* Пропорционально уменьшаем текст громкости */
-    }
-
-    .volume-wrapper {
-        height: 7px;
-        width: 180px;
-    }
+    width: 11px;
+    height: 16px;
+    background-color: #3f3f3f;
+    border-radius: 50%;
+    cursor: pointer;
 }
