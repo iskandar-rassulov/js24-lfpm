@@ -1,0 +1,41 @@
+@media (max-width: 768px) {
+
+    /* Основная часть страницы */
+    .site-main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #timer {
+        font-family: 'Comfortaa', sans-serif;
+        font-size: 10rem;
+        font-weight: bold;
+        text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+        margin: 0;
+    }
+
+    .button-container {
+        display: flex;
+        flex-direction: column; /* Элементы будут располагаться в колонку */
+        gap: 2vh; /* Расстояние между элементами */
+        align-items: center; /* Центрирование элементов по горизонтали */
+    }
+
+    .start-pause-buttons {
+        margin-top: 20vh;
+        margin-bottom: 1vh;
+    }
+
+    .player-wrapper {
+        display: flex;
+        justify-content: center; /* Выравнивание вправо */
+        align-items: center; /* Вертикальное центрирование */
+        margin: 0 auto;
+        margin-top: 2vh;
+    }
+    
+    
+    
+}

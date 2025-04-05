@@ -4,6 +4,7 @@ body {
     font-family: Arial, sans-serif;
     min-height: 100vh;
     color: white;
+    overflow-x: hidden;
 }
 
 video#backgroundVideo {
@@ -230,7 +231,7 @@ video#backgroundVideo {
     transform: scale(1.06);
 }
 
-/* Подвал (footer) */
+/* footer */
 .site-footer {
     padding: 20px 0;
     text-align: center;
