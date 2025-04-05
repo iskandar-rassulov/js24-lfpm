@@ -17,6 +17,27 @@
         align-items: center;
     }
 
+    .mode-buttons {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5vh;
+    }
+
+    .mode-buttons button {
+        font-family: 'Comfortaa', sans-serif;
+        font-size: 1.1rem;
+        background-color: #2d2d2d33;
+        border: 3px solid white;
+        color: #ffffff;
+        border-radius: 10px;
+        text-shadow: 8px 8px 16px rgba(0, 0, 0, 1);
+        transition: transform 0.3s ease;
+        cursor: pointer;
+        padding: 8px 12px;
+    }
+
     #timer {
         font-family: 'Comfortaa', sans-serif;
         font-size: 10rem;
